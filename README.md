@@ -70,11 +70,11 @@ The software exists to serve the trading edge, not the other way around. The alp
 | :--- | :--- |
 | Portfolio Return | **+15%** |
 | Nifty 50 Benchmark | -12% |
-| MCX Book | Leading significantly |
+| MCX Book | **+15.88%** |
 | NSE Equity | -1% |
 | Max Drawdown    | -3.85%  |
-| Sharpe Ratio    | 2.11    |
-| Sortino Ratio   | 3.24    |
+| Sharpe Ratio    | **2.11**    |
+| Sortino Ratio   | **3.24**    |
 | Period          | 21 Nov 2025 → 15 Mar 2026 |
 
 ## Performance Evidence

@@ -128,22 +128,6 @@ $ signalscan --market NSE --conditions P1,P2,P3 --export tv
 
 ---
 
-### [Institutional_Long_Strategy](https://github.com/Vikkrantpol/Institutional_Long_Strategy)
-
-`Pine Script v6` `TradingView` `Quant Research`
-
-High-precision breakout strategy modeled on institutional accumulation behavior. Backtested Jan 2020 – Jul 2025 across 50+ instruments. Core logic is proprietary — repository demonstrates authorship and results.
-
-| Ticker |  Backtest Return |
-| :--- |  :--- |
-| NVDA              | 502%        |
-| GRSE              | 1076%       |
-| BSE               | 1786%       |
-| GOODLUCK          | 2458%       |
-| BTC               | 1083%       |
-| TSLA              | 2179%       |
-
-Max drawdown < 25% across all instruments tested.
 
 ---
 

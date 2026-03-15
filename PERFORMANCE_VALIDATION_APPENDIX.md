@@ -39,6 +39,8 @@
 | Deployment Stage | **Testing / validation phase** |
 | Pricing Reality | **Slippage-aware / tick-to-tick monitored** |
 | Overall Return | **~14.68%** |
+| Sharpe Ratio    | **2.11**    |
+| Sortino Ratio   | **3.24**    |
 | Daily-Close Max Drawdown | **-3.19%** |
 | High-Precision Max Drawdown | **-3.85%** |
 | Equity Sleeve Performance | **~ -1%** |

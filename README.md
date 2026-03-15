@@ -72,6 +72,10 @@ The software exists to serve the trading edge, not the other way around. The alp
 | MCX Book | Leading significantly |
 | NSE Equity | -1% |
 
+## Performance Evidence
+
+Detailed validation results, drawdown analysis, benchmark comparison, and event studies are in [PERFORMANCE_VALIDATION_APPENDIX.md](./PERFORMANCE_VALIDATION_APPENDIX.md).
+
 ---
 
 ## Featured Projects

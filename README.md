@@ -68,7 +68,7 @@ The software exists to serve the trading edge, not the other way around. The alp
 
 | Metric | Value |
 | :--- | :--- |
-| Portfolio Return | **+15%** |
+| Portfolio Return | **+14.68%** |
 | Nifty 50 Benchmark | -12% |
 | MCX Book | **+15.88%** |
 | NSE Equity | -1% |

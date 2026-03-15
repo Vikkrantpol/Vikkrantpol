@@ -60,7 +60,7 @@
 
 Embed the following immediately below this section in your repo:
 
-```md
+
 ## Equity Curve
 
 ![Equity Curve](./assets/equity_curve_daily_close.png)
@@ -68,7 +68,7 @@ Embed the following immediately below this section in your repo:
 ## Benchmark Comparison
 
 ![Benchmark Comparison](./assets/benchmark_comparison.png)
-```
+
 
 ---
 
@@ -214,11 +214,11 @@ This is a positive sign analytically because it shows that the reporting framewo
 
 Embed your drawdown chart here:
 
-```md
+
 ## Drawdown Chart
 
 ![Daily Close Drawdown](./assets/drawdown_daily_close.png)
-```
+
 
 ---
 

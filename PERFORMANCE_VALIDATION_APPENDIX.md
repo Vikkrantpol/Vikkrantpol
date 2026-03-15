@@ -277,7 +277,7 @@ Internal review indicates that most commodity positions had already been materia
 
 ### Approximate Exit-Price Snapshot
 
-| Instrument | Approx Exit Date | Approx Exit Price | Crash Low | Avoided Loss per Unit |
+| Instrument | Exit Date | Approx Exit Price | Crash Low | Avoided Loss per Unit |
 | :--- | :--- | :--- | :--- | :--- |
 | MCX:SILVER | Jan 29, 2026 | **~₹3,77,000** | ~₹2,26,000 | **~40.1%** |
 | MCX:SILVERM | Jan 29, 2026 | **~₹3,85,000** | ~₹2,33,000 | **~39.5%** |

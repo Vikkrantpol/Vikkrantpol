@@ -1,10 +1,10 @@
 <div align="center">
 
 ```text
-╔══════════════════════════════════════════════════════════════╗
-║   V I K K R A N T   P O L   ·   A L G O   T R A D E R      ║
-║     IIT Goa  ·  NSE F&O  ·  MCX  ·  US Equities            ║
-╚══════════════════════════════════════════════════════════════╝
+                              ╔══════════════════════════════════════════════════════════════╗
+                              ║   V I K K R A N T   P O L   ·   A L G O   T R A D E R        ║
+                              ║     IIT Goa  ·  NSE F&O  ·  MCX  ·  US Equities              ║
+                              ╚══════════════════════════════════════════════════════════════╝
 ```
 
 **Independent Quant Developer · Algorithmic Trading Systems · Market Infrastructure**

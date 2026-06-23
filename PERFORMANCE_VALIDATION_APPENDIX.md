@@ -78,19 +78,23 @@ They are not claims of prediction, guaranteed protection, repeatable profits, or
 
 ### Commodity Stress Scenario — Precious Metals / Silver Crash
 
-A severe precious-metals and silver dislocation occurred during the validation window. The master equity curve visually marks the event as part of the validation record.
+The validation window included a severe precious-metals dislocation, visible in the master equity curve as the “Silver Crash” event marker.
 
-The review focuses on whether the infrastructure preserved:
+The chart annotation records: **“Silver Crash: -46% | Optimus: Already Out.”** This is included as a validation artifact showing that the infrastructure had a reviewable risk-state and position-state record before the full stress move unfolded.
 
-- monitoring continuity during a rapid market move;
-- visibility into relevant exposure and changing risk state;
-- timely alerting and operator review;
-- coherent workflow records and reconciliation; and
-- an explicit operator-supervised response process.
+This case study is important because it tests whether the infrastructure could preserve visibility and operational discipline during a fast adverse commodity-market shock.
 
-The chart contains the annotation **“Silver Crash: -46% | Optimus: Already Out.”** This is retained only as a chart artifact and observed validation note. It is not a claim that Optimus Quanta predicted the dislocation, will always exit before future crashes, or can guarantee protection from commodity-market losses.
+| Validation Area       | What Was Reviewed                                                                                              |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| Exposure visibility   | Whether the system preserved a clear view of commodity exposure before and during the stress window            |
+| Risk-state tracking   | Whether risk status, drawdown behavior, and alerts remained reviewable                                         |
+| Position-state review | Whether the system retained a clear record of whether relevant exposure was active, reduced, or already exited |
+| Operator workflow     | Whether the operator could review the situation without losing dashboard or reporting clarity                  |
+| Post-event evidence   | Whether the event could be reconstructed after the fact without relying on memory or screenshots alone         |
 
-The operational evidence is narrower: the infrastructure supported exposure review, risk-state tracking, alerting, reconciliation, and operator workflow coherence during the observed scenario.
+The operational observation from this scenario is narrow: the infrastructure preserved a usable view of exposure, risk state, and workflow history during a major commodity stress event.
+
+This does **not** mean the system can always exit before future crashes. It does **not** claim prediction ability, guaranteed protection, or repeatable profits during commodity shocks. The case is presented only as infrastructure validation evidence.
 
 ### Geopolitical Stress Scenario — Iran-US War Window
 
@@ -131,7 +135,10 @@ The relevant evidence is infrastructure survivability, observability, reconcilia
 - Event evidence could be reviewed after the fact.
 - Workflow records were preserved.
 - Operator-supervised processes remained explicit.
-- Public evidence can discuss infrastructure behavior without exposing proprietary logic.
+- Stress scenarios could be reviewed without exposing proprietary strategy rules.
+- Chart annotations were preserved as validation artifacts.
+- The system retained operational evidence around exposure, risk state, and workflow review.
+- Public discussion can describe infrastructure behavior without exposing private alpha logic.
 
 ### What These Stress Scenarios Do Not Prove
 

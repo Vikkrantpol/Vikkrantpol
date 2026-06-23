@@ -72,25 +72,75 @@ The public validation view uses controlled forward-simulation or pilot-ledger re
 
 ## 5. Operational Stress-Scenario Evidence
 
-Event studies are retained only as examples of infrastructure behavior during demanding market conditions. They are not presented as proof that similar future events will produce similar outcomes.
+These operational validation case studies examine infrastructure behavior during demanding market conditions. They focus on monitoring, risk-state visibility, exposure review, alerting, reconciliation, and operator-supervised workflow discipline.
 
-### Commodity Stress Scenario
+They are not claims of prediction, guaranteed protection, repeatable profits, or investment advice. The discussion remains public-safe and does not expose private strategy rules, private execution logic, account data, live positions, broker credentials, or proprietary alpha logic.
 
-The precious-metals dislocation was reviewed as a commodity stress scenario. The purpose of the review was to assess whether monitoring, exposure visibility, alerts, risk review, and operator-supervised workflows remained coherent during a rapid adverse move.
+### Commodity Stress Scenario — Precious Metals / Silver Crash
 
-The evidence supports an operational observation: the infrastructure provided a usable view of changing market conditions and risk state during the scenario. It does not establish that losses will always be avoided or that the system can predict future commodity shocks.
+A severe precious-metals and silver dislocation occurred during the validation window. The master equity curve visually marks the event as part of the validation record.
 
-### Geopolitical Stress Scenario
+The review focuses on whether the infrastructure preserved:
 
-The geopolitical shock window was reviewed as a cross-asset operational stress scenario. The assessment focused on market-data continuity, scanner and dashboard behavior, alerting, portfolio-level risk visibility, and operator review during elevated volatility.
+- monitoring continuity during a rapid market move;
+- visibility into relevant exposure and changing risk state;
+- timely alerting and operator review;
+- coherent workflow records and reconciliation; and
+- an explicit operator-supervised response process.
 
-The evidence supports an operational observation: the workflow remained reviewable and functionally coherent under stressed conditions. It does not imply advance knowledge of geopolitical events, guaranteed protection, or repeatable profits during future shocks.
+The chart contains the annotation **“Silver Crash: -46% | Optimus: Already Out.”** This is retained only as a chart artifact and observed validation note. It is not a claim that Optimus Quanta predicted the dislocation, will always exit before future crashes, or can guarantee protection from commodity-market losses.
 
-### Choppy-Market Scenario
+The operational evidence is narrower: the infrastructure supported exposure review, risk-state tracking, alerting, reconciliation, and operator workflow coherence during the observed scenario.
+
+### Geopolitical Stress Scenario — Iran-US War Window
+
+The master equity curve also visually marks the Iran-US war window. This case study reviews infrastructure behavior during elevated geopolitical uncertainty and cross-asset volatility.
+
+The review focuses on:
+
+- cross-asset monitoring and market-state visibility;
+- defence-basket handling within the observed workflow;
+- dashboard continuity and alert review;
+- portfolio and risk-state assessment;
+- preservation of workflow records; and
+- operator-supervised decision discipline.
+
+The chart contains the annotation **“Iran-US War | Held Defence Basket → Profited.”** This wording is treated only as a chart artifact and observed validation note for that specific window. It does not imply geopolitical prediction, advance knowledge of the event, guaranteed protection, or repeatable profits from future war-related market moves.
+
+The relevant evidence is that the workflow remained visible, reviewable, and operationally coherent under the observed stress—not that the same market outcome can be reproduced.
+
+### Choppy-Market Regime Scenario
 
 The validation window also included periods of unstable and directionally inconsistent market behavior. These periods were used to examine whether repeated signal changes, drawdown monitoring, workflow-event volume, and operator review remained manageable.
 
-The relevant evidence is infrastructure behavior—continuity, observability, reconciliation, and risk discipline—not a benchmark-specific claim.
+This scenario tested whether:
+
+- monitoring remained usable as market direction changed;
+- repeated signal and workflow-state changes could be reviewed;
+- drawdown and risk-state visibility remained central;
+- workflow-event volume remained operationally manageable;
+- records could be reconciled after changing conditions; and
+- operator-supervised processes maintained discipline.
+
+The relevant evidence is infrastructure survivability, observability, reconciliation, and workflow discipline—not return bragging or a claim that choppy markets can be navigated without loss.
+
+### What These Stress Scenarios Demonstrate
+
+- Monitoring surfaces remained usable under stress.
+- Risk review and drawdown visibility remained central.
+- Event evidence could be reviewed after the fact.
+- Workflow records were preserved.
+- Operator-supervised processes remained explicit.
+- Public evidence can discuss infrastructure behavior without exposing proprietary logic.
+
+### What These Stress Scenarios Do Not Prove
+
+- They do not prove permanent alpha.
+- They do not prove future profitability.
+- They do not guarantee future drawdown limits.
+- They do not imply advance knowledge of shocks.
+- They do not provide investment advice or return projections.
+- They do not reveal private strategy or execution logic.
 
 ---
 

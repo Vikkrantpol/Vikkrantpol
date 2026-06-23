@@ -2,13 +2,13 @@
 
 ```text
                           ╔══════════════════════════════════════════════════════════════╗
-                          ║   V I K K R A N T   P O L   ·   A L G O   T R A D E R        ║
-                          ║     IIT Goa  ·  NSE F&O  ·  MCX  ·  US Equities              ║
+                          ║              VIKKRANT POL · OPTIMUS QUANTA                    ║
+                          ║   IIT Goa · Quant Research Infrastructure · Risk Analytics   ║
                           ╚══════════════════════════════════════════════════════════════╝
 ```
 
-**Independent Quant Developer · Algorithmic Trading Systems · Market Infrastructure**
-*Building execution-aware trading software, research tooling, and derivatives infrastructure.*
+**Founder, Optimus Quanta · Quant Research Infrastructure · Systematic Market Workflows · Risk Analytics**
+*Building private infrastructure for systematic market research, validation, risk analysis, and live operations.*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vikkrant_Pol-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/vikkrantpol)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
@@ -25,34 +25,23 @@
 
 > *"Markets are information. Infrastructure is alpha."*
 
-I'm **Vikkrant Pol** — an IIT Goa graduate, quantitative trader, and developer focused on building systematic trading tools for **NSE F&O**, **MCX**, and selected **US equities** workflows.
+I'm **Vikkrant Pol**, an IIT Goa graduate and the founder-builder of **Optimus Quanta**, a private quant research and trading infrastructure system.
 
-My core domain expertise is in **trading, technical analysis, derivatives, and market structure**. I am not a traditional software engineer by background; I am a **domain-first builder** who uses AI-assisted coding to turn trading research, execution logic, and workflow ideas into working full-stack systems.
+I build systems for **systematic market research, backtesting, risk analytics, scanners, dashboards, and live-operations infrastructure** across derivatives, commodities, equities, and related market workflows.
 
-My work sits at the intersection of:
+My work is domain-led and infrastructure-focused: translating research questions into repeatable data workflows, validation tooling, monitoring surfaces, risk controls, and operational systems. AI serves as a research and development accelerator within that process, while market judgment, system design, validation standards, and operational responsibility remain central.
 
-* **algorithmic trading**
-* **derivatives and options engineering**
-* **market scanners and research infrastructure**
-* **backtesting and quant analytics**
-* **risk management tooling**
-* **AI-assisted trading workflows**
-
-I use AI heavily in the implementation layer, but the **core ideas, trading rules, research direction, debugging decisions, and system structure are mine**. My focus is not coding for its own sake — it is building tools that help identify, validate, and deploy market edge.
-
-I see AI as a force multiplier for development speed, not a substitute for domain judgment. AI can accelerate software creation dramatically, but live trading still depends on research quality, execution discipline, and human responsibility.
-
-My conviction is simple: robust trading infrastructure should not be reserved only for institutions.
+My conviction is simple: robust quant infrastructure should not be reserved only for institutions.
 
 ---
 
-## Proprietary Trading System
+## Optimus Quanta — Private Quant Research Infrastructure
 
-A private multi-module trading system designed around research, monitoring, analytics, and execution support.
+A private production-grade quant infrastructure system designed around systematic research, monitoring, analytics, risk review, broker workflows, and operator-supervised execution support.
 
-This stack grew out of years of market R&D and hands-on trading work. What a traditional solo developer might spend many months building, I have been able to prototype, structure, iterate, and refine faster through AI-assisted development — while still owning the strategy logic, bug fixing, workflow design, and decision-making end to end.
+This stack grew out of years of market R&D and hands-on trading work. It is developed iteratively with AI-assisted research and engineering workflows that accelerate implementation while preserving ownership of research direction, system design, validation, debugging, and operational decisions.
 
-The software exists to serve the trading edge, not the other way around. The alpha thesis, rule design, and practical constraints come first; the code is the vehicle that makes those ideas usable.
+The infrastructure exists to support the research process, validation standards, risk discipline, and operational workflow. Proprietary strategy logic and private execution details are intentionally not exposed publicly.
 
 | Module | Description |
 | :--- | :--- |
@@ -64,26 +53,26 @@ The software exists to serve the trading edge, not the other way around. The alp
 | Data Processing | EOD and structured market-data workflows |
 | Options Analytics | Greeks, IV workflows, PCR, GEX, and related derivatives tooling |
 
-**Live Paper Trading Results (3.5 months)**
+## Public Validation Evidence
 
-| Metric | Value |
-| :--- | :--- |
-| Portfolio Return | **+14.68%** |
-| Nifty 50 Benchmark | -12% |
-| MCX Book | **+15.88%** |
-| NSE Equity | -1% |
-| Max Drawdown    | -3.85%  |
-| Sharpe Ratio    | **2.11**    |
-| Sortino Ratio   | **3.24**    |
-| Period          | 21 Nov 2025 → 15 Mar 2026 |
+Selected validation evidence for Optimus Quanta is published on [optimusquanta.com](https://optimusquanta.com) as operational evidence of infrastructure behavior under controlled forward-simulation or pilot conditions.
 
-## Performance Evidence
+| Validation Metric        | Public Evidence |
+| :----------------------- | --------------: |
+| Observed Net Result      |      **17.13%** |
+| Master Equity Curve View |     **+17.16%** |
+| Nifty 50 Comparison      |    **~ -15.9%** |
+| Observed Max Drawdown    |       **4.29%** |
+| Sharpe Ratio             |        **3.50** |
+| Workflow Events / Trades |         **406** |
 
-Detailed validation results, drawdown analysis, benchmark comparison, and event studies are in [PERFORMANCE_VALIDATION_APPENDIX.md](./PERFORMANCE_VALIDATION_APPENDIX.md).
+Detailed validation notes, stress-window evidence, silver-crash review, geopolitical shock review, and the master equity curve are maintained in [PERFORMANCE_VALIDATION_APPENDIX.md](./PERFORMANCE_VALIDATION_APPENDIX.md).
+
+These figures are presented as infrastructure validation evidence, not investment advice, projected returns, or a guarantee of future performance.
 
 ---
 
-## Featured Projects
+## Selected Public Repositories
 
 ### [24Options](https://github.com/Vikkrantpol/24Options) — Options Intelligence & Execution Platform
 
@@ -152,23 +141,11 @@ Backtesting and visualization framework for inside-bar based systematic trade se
 
 Cross-exchange arbitrage research focused on spread detection, fee/slippage-aware evaluation, and performance testing.
 
-### [RSI_BB_Scalping](https://github.com/Vikkrantpol/RSI_BB_Scalping)
-
-`Python` `Technical Research`
-
-Scalping strategy research using RSI + Bollinger Bands with structured trade analysis.
-
 ### [EMA-Strategy-Backtesting](https://github.com/Vikkrantpol/EMA-Strategy-Backtesting)
 
 `Python` `pandas` `matplotlib`
 
 Backtesting framework for an EMA-based strategy with performance visualization.
-
-### [Launch_Pad_Strategy](https://github.com/Vikkrantpol/Launch_Pad_Strategy)
-
-`Python` `Pine Script`
-
-Strategy research demonstrating backtesting, charting, and workflow design.
 
 ### [Android-App---Position-Size-Calculator](https://github.com/Vikkrantpol/Android-App---Position-Size-Calculator)
 
@@ -208,20 +185,16 @@ Risk Management  ███████████████████░  P
 
 ---
 
-## AI Integration
+## AI as a Research & Development Accelerator
 
-I use LLMs pragmatically inside research and trading workflows for:
+AI supports the research and development process where it improves speed, structure, and iteration quality. Typical uses include:
 
 * trade review
 * structured signal explanation
 * workflow assistance
-* developer productivity across multi-file systems
+* development productivity across multi-file systems
 
-Currently architecting **24Options** toward an autonomous **MoQS (Mixture-of-Quant-Specialists) swarm**.
-
-My broader approach is domain-first: years of trading research and market study combined with AI as a leverage layer for speed, structure, and system-building.
-
-The emphasis is on **useful tooling**, not hype.
+The broader approach remains domain-first: market research, validation discipline, risk thinking, and reliable infrastructure lead; AI accelerates selected research and engineering workflows.
 
 ---
 

@@ -1,437 +1,324 @@
-# Performance Validation Appendix — Private Proprietary Trading Stack
+# Performance Validation Appendix — Optimus Quanta Infrastructure Validation
 
-> **Companion document to:** *Private Multi-Asset Trading Stack — Overview, Validation, and Event Studies*  
-> **Scope:** Validation-phase performance, drawdown behavior, stress events, and supporting evidence  
-> **Status:** Internal-style summary prepared from operator records, internal reports, and validation snapshots
+> **Scope:** Public-safe infrastructure validation, operational observations, and stress-scenario evidence
+> **Status:** Summary prepared from controlled forward-simulation and pilot-ledger validation records
 
----
+These figures are presented as operational evidence of infrastructure behavior under controlled forward-simulation or pilot-ledger conditions. They are not projected investor returns, investment advice, or a guarantee of future performance.
 
-## Table of Contents
-
-1. [Executive Dashboard](#1-executive-dashboard)
-2. [Live Events Handled by the Stack](#2-live-events-handled-by-the-stack)
-3. [Document Status / Disclosure](#3-document-status--disclosure)
-4. [Methodology Notes](#4-methodology-notes)
-5. [Purpose of This Appendix](#5-purpose-of-this-appendix)
-6. [Validation Window](#6-validation-window)
-7. [Benchmark Context](#7-benchmark-context)
-8. [Drawdown Analysis](#8-drawdown-analysis)
-9. [Choppy Market Regime Validation](#9-choppy-market-regime-validation)
-10. [Precious Metals Crash Event Study — February 2026](#10-precious-metals-crash-event-study--february-2026)
-11. [War Scenario Event Study — Feb 28 to Mar 2, 2026](#11-war-scenario-event-study--feb-28-to-mar-2-2026)
-12. [System Features Most Relevant to Risk Survival](#12-system-features-most-relevant-to-risk-survival)
-13. [What the Evidence Supports So Far](#13-what-the-evidence-supports-so-far)
-14. [Known Limitations](#14-known-limitations)
-15. [Relationship to Public Repositories](#15-relationship-to-public-repositories)
-16. [Closing Interpretation](#16-closing-interpretation)
+This appendix does not disclose private strategy rules, broker credentials, account data, live positions, private repository details, execution logic, or proprietary alpha logic.
 
 ---
 
-## 1. Executive Dashboard
+## 1. Validation Snapshot
 
-### Validation Snapshot
+| Metric                            | Current Observation                                     |
+| :-------------------------------- | :------------------------------------------------------ |
+| Validation Mode                   | Controlled forward-simulation / pilot-ledger conditions |
+| Observed Net Result               | 17.13%                                                  |
+| Observed Max Drawdown             | 4.29%                                                   |
+| Risk-Adjusted Validation Ratio    | 3.99                                                    |
+| Workflow Quality Factor           | 1.85                                                    |
+| Modeled Slippage Tolerance        | 0.1956%                                                 |
+| Observed Workflow Events / Trades | 406                                                     |
 
-| Metric | Current Observation |
-| :--- | :--- |
-| Report Period | **21 Nov 2025 → 15 Mar 2026** |
-| Validation Mode | **Live paper-trading** |
-| Testing Start Date | **21 Nov 2025** |
-| Deployment Stage | **Testing / validation phase** |
-| Pricing Reality | **Slippage-aware / tick-to-tick monitored** |
-| Overall Return | **~14.68%** |
-| Sharpe Ratio    | **2.11**    |
-| Sortino Ratio   | **3.24**    |
-| Daily-Close Max Drawdown | **-3.19%** |
-| High-Precision Max Drawdown | **-3.85%** |
-| Equity Sleeve Performance | **~ -1%** |
-| Reporting Granularity | **63 daily snapshots vs 179,000+ high-precision records** |
-| Current Conclusion | **Promising validation-phase behavior, not final proof** |
-
-### Why Paper Mode Is Being Used
-
-| Item | Current Position |
-| :--- | :--- |
-| Current stage | **System still under testing** |
-| Why paper mode? | **To validate live behavior before stronger deployment claims** |
-| Are live conditions considered? | **Yes** |
-| Is slippage considered? | **Yes** |
-| Is tick-to-tick market behavior considered? | **Yes** |
-| Is this an audited investor statement? | **No** |
-
-### Suggested Chart Placement
-
-Embed the following immediately below this section in your repo:
-
-
-## Equity Curve
-
-![Equity Curve](./assets/equity_curve_daily_close.png)
-
-## Benchmark Comparison
-
-![Benchmark Comparison](./assets/benchmark_comparison.png)
-
+The snapshot is intended to show how the infrastructure behaved during the observed validation conditions. It should not be interpreted as an audited performance statement or an indication of returns available to an investor.
 
 ---
 
-## 2. Live Events Handled by the Stack
+## 2. Master Equity Curve
 
-| Event / Regime | What happened | Why it matters |
-| :--- | :--- | :--- |
-| Extended choppy NSE regime | system stayed relatively resilient while benchmarks were weak | tests survivability outside ideal trends |
-| February 2026 precious-metals crash | commodity exposure was materially reduced / exited before full damage | validates exit discipline and crash defense |
-| War / shock-sensitive market regime | stack maintained process discipline across NSE and MCX under abnormal conditions | tests behavior under geopolitical stress |
-| Intraday path-risk vs close-only reporting | high-precision DD captured more truthful risk than smooth daily-close view | improves analytical credibility |
+![Optimus Quanta master equity curve vs Nifty 50](./assets/optimus_master_equity_curve.png)
 
----
+Figure: Optimus Quanta master equity curve versus Nifty 50 during the controlled forward-simulation / pilot-ledger validation window. The chart is shown as operational evidence of infrastructure behavior, not as projected returns, investment advice, or a guarantee of future performance.
 
-## 3. Document Status / Disclosure
+### Chart Note
 
-| Item | Status |
-| :--- | :--- |
-| System code | **Private** |
-| Deployment stage | **Live testing / paper mode** |
-| Slippage modeled | **Yes** |
-| Tick-to-tick monitoring | **Yes** |
-| Human supervision | **Yes** |
-| Audited investor statement | **No** |
-| Public code availability | **Not shared** |
-| Real-capital production claim | **Not made in this document** |
+The master equity curve image displays +17.16% net return, Sharpe 3.50, 82 trading days, and Nifty 50 around -15.9% for the plotted validation view. If this differs slightly from the public website metric cards, treat the chart as the latest visual validation artifact and keep the metric-card table aligned with [optimusquanta.com](https://optimusquanta.com) until the website is updated.
 
 ---
 
-## 4. Methodology Notes
+## 3. Stress-Tested Performance Highlights
 
-| Methodology Item | Current Treatment |
-| :--- | :--- |
-| Report window | **21 Nov 2025 → 15 Mar 2026** |
-| Return measurement | validation-phase portfolio return snapshot |
-| Drawdown measurement | both daily-close and high-precision path-aware views |
-| Slippage treatment | modeled / considered in paper-mode workflow |
-| Tick handling | tick-to-tick LTP-aware monitoring |
-| Benchmark logic | Nifty + smallcap-oriented comparison for context |
-| Equity sleeve meaning | equity-only portion of broader multi-asset stack |
-| Manual overrides | possible and disclosed where relevant |
+Optimus Quanta's validation evidence is not limited to a smooth equity curve. The more important observation is how the infrastructure behaved during hostile live-market conditions: commodity dislocation, geopolitical shock, choppy market structure, drawdown pressure, and benchmark weakness.
 
----
+The master equity curve records the following validation view:
 
-## 5. Purpose of This Appendix
+| Stress-Tested Metric      | Observed Validation View                      |
+| :------------------------ | :-------------------------------------------- |
+| Optimus Quanta Net Result | +17.16% on the plotted master equity curve    |
+| Nifty 50 Comparison       | Approximately -15.9% on the same plotted view |
+| Sharpe Ratio              | 3.50 on the plotted validation view           |
+| Trading Days              | 82                                            |
+| Observed Max Drawdown     | 4.29% from the public validation snapshot     |
+| Workflow Events / Trades  | 406 from the public validation snapshot       |
 
-This appendix captures the **current validation-phase performance** of my private proprietary trading stack.
+These figures are shown as live-market forward-validation / pilot-ledger evidence. They are not an audited investor statement, investment advice, projected returns, or a guarantee of future performance.
 
-It is meant to document:
+### Stress Windows Captured
 
-| What this appendix covers | Why it matters |
-| :--- | :--- |
-| evaluation period | defines the testing window |
-| current performance behavior | shows what the stack has done so far |
-| drawdown characteristics | shows how risk behaved |
-| stress-event response | tests whether the stack survives hostile conditions |
-| human intervention boundaries | keeps the document honest |
-
-This is **not** an audited investor document and should not be read as a claim of guaranteed future performance. It is a structured summary of a private system under active validation.
-
----
-
-## 6. Validation Window
-
-### Report Window
-The current validation report covers the period from **21 Nov 2025 to 15 Mar 2026**.
-
-### Live Validation Start
-The current live paper-trading phase began on **21 Nov 2025**.
-
-### Operating Assumptions
-This validation phase is intended to reflect live conditions as closely as possible, including:
-
-| Validation Input | Included in Current Phase |
-| :--- | :--- |
-| broker-facing workflow constraints | **yes** |
-| tick-to-tick LTP awareness | **yes** |
-| slippage-aware logic | **yes** |
-| real-time alerts and execution timing | **yes** |
-| live regime effects | **yes** |
-| clean backtest-only assumptions | **no** |
-
-### Scope of Current Assessment
-The current evidence covers a period characterized by:
-
-- a difficult and choppy NSE regime
-- war/shock-sensitive market behavior
-- a major precious-metals crash in MCX contracts
-- multi-asset exposure management across equities and commodities
-
----
-
-## 7. Benchmark Context
-
-The validation period has not been a clean bull market. It has been a difficult regime marked by chop, reversals, and stress-sensitive moves.
-
-### Benchmark Readout
-
-| Benchmark Context | Current Reading |
-| :--- | :--- |
-| Nifty backdrop *(as of 15 Mar 2026)* | **~ -12%** |
-| smallcap-oriented benchmark *(as of 15 Mar 2026)* | **~ -12%** |
-| equity sleeve | **~ -1%** |
-| overall stack | **positive overall (~14.68%)** |
-
-### Why Benchmark Choice Matters
-For equity comparison, a broad or smallcap-sensitive benchmark can be more representative than a narrow large-cap benchmark when strategy exposure spans wider market behavior. The goal of comparison here is not optics, but realism.
-
-### Comparative Readout
-
-| Item | Return / Reading |
-| :--- | :--- |
-| Private stack overall | **~ +14.68%** |
-| Equity sleeve | **~ -1%** |
-| Nifty | **~ -12%** |
-| Smallcap-oriented benchmark | **~ -12%** |
-
----
-
-## 8. Drawdown Analysis
-
-### Daily-Close View vs High-Precision View
-One of the most important analytical distinctions in the current reporting is the difference between:
-
-- **daily close snapshots**
-- **high-precision / intraday-equivalent logs**
-
-This matters because daily-close reporting often understates the real path risk experienced inside the session.
-
-### Reported Difference
-
-| Metric | Daily Close Snapshot | High-Precision Log |
-| :--- | :--- | :--- |
-| Max Drawdown | **-3.19%** | **-3.85%** |
-| Reporting Style | smoothed end-of-day | granular path-aware |
-| Risk Visibility | lower | higher |
-| Usefulness | reporting-friendly | more realistic risk picture |
-
-### Interpretation
-This is a positive sign analytically because it shows that the reporting framework is not pretending that close-to-close performance tells the full truth. The system is being evaluated against both smoother reporting and more realistic path-aware risk tracking.
-
-### Suggested Chart Placement
-
-Embed your drawdown chart here:
-
-
-## Drawdown Chart
-
-![Daily Close Drawdown](./assets/drawdown_daily_close.png)
-
-
----
-
-## 9. Choppy Market Regime Validation
-
-A large part of the current validation period took place in a **highly choppy equity environment**.
-
-This matters because choppy regimes are where many systems fail quietly through:
-
-- overtrading
-- false breakouts
-- repeated stop-outs
-- inability to preserve capital
-- poor benchmark-relative behavior despite looking fine in backtests
-
-### Choppy Regime Readout
-
-| Observation | Interpretation |
-| :--- | :--- |
-| overall stack remained positive | indicates regime resilience |
-| equity sleeve stayed around **~ -1%** | materially stronger than deeply negative benchmarks |
-| drawdown remained contained | suggests defensive behavior worked |
-| system did not rely on one clean trend regime | improves robustness narrative |
+| Stress Window                  | What Happened                                                                 | Optimus Quanta Validation Observation                                                                                                                                      |
+| :----------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Precious Metals / Silver Crash | A severe commodity dislocation occurred; silver fell around 46% in the recorded stress window | The chart records "Optimus: Already Out"; under conservative validation assumptions, the approximate avoided-risk scenario was ~8–12% of capital |
+| Iran-US War Window             | Geopolitical shock created cross-asset volatility                             | The chart records "Held Defence Basket → Profited," showing that the infrastructure preserved reviewable workflow evidence during a geopolitical stress window             |
+| Choppy Market Regime           | Market direction remained unstable and inconsistent                          | The system maintained a reviewable workflow across signal changes, drawdown monitoring, event volume, and operator review                                                   |
+| Benchmark Weakness             | Nifty 50 declined materially in the plotted validation view                   | Optimus Quanta remained positive in the same plotted validation view                                                                                                       |
 
 ### Why This Matters
-A system that survives chop with controlled damage is often more valuable than a system that looks spectacular only in ideal trend environments.
+
+The key validation claim is not that Optimus Quanta can predict every shock. The key claim is that the infrastructure produced a reviewable operating record during severe market stress.
+
+The evidence supports that:
+
+- the equity curve remained resilient during stress windows;
+- benchmark-relative behavior was materially stronger in the plotted validation view;
+- risk and exposure state remained reviewable;
+- event annotations were preserved as validation artifacts;
+- operator-supervised workflow discipline remained visible;
+- the system generated post-event evidence instead of relying on memory; and
+- the infrastructure could be evaluated under adverse market conditions, not only in clean trending markets.
+
+### Important Boundary
+
+This section does not claim permanent alpha, guaranteed crash protection, geopolitical prediction ability, or repeatable profits during future stress events. It presents stress-window behavior as operational validation evidence for the infrastructure.
 
 ---
 
-## 10. Precious Metals Crash Event Study — February 2026
+## 4. What Is Being Validated
 
-One of the strongest stress tests so far came from the **February 2026 crash in precious metals**, where Indian commodity markets experienced an extreme collapse in gold and silver contracts.
+Optimus Quanta is evaluated as an infrastructure and operating workflow, not solely as a return series. The validation process reviews:
 
-Internal review indicates that most commodity positions had already been materially reduced or exited before the full crash impact unfolded.
-
-### Why This Event Matters
-
-| Stress Question | What was being tested |
+| Validation Area | Operational Question |
 | :--- | :--- |
-| could weakness be detected early? | signal and regime sensitivity |
-| could exposure be reduced in time? | exit discipline |
-| could capital be protected? | risk architecture |
-| could the stack act before hindsight became obvious? | real operating usefulness |
+| Research workflow | Can market observations be captured, tested, and reviewed consistently? |
+| Data and monitoring | Do scanners, dashboards, and telemetry remain coherent during changing conditions? |
+| Risk review | Are drawdown, exposure, and workflow exceptions visible to the operator? |
+| Broker workflows | Can broker-facing states and operational constraints be handled reliably? |
+| Slippage tolerance | Does the modeled workflow remain usable under non-ideal execution assumptions? |
+| Operator supervision | Can alerts, reviews, and interventions be performed without obscuring system state? |
+| Reconciliation | Can intended, observed, and recorded workflow states be compared and reviewed? |
 
-### Internal Market Impact Snapshot
-
-| Instrument | Peak Price | Crash Low | Drop (%) |
-| :--- | :--- | :--- | :--- |
-| MCX Silver Futures | ~₹4,21,000 | ~₹2,26,000 | **-46.18%** |
-| MCX Silver Micro | ~₹4,28,000 | ~₹2,31,000 | **-46.05%** |
-| MCX Silver Mini | ~₹4,22,000 | ~₹2,33,000 | **-45.30%** |
-| MCX Gold Futures | ~₹1,81,000 | ~₹1,42,000 | **-24.65%** |
-| MCX Gold Petal | ~₹19,100 | ~₹15,000 | **-21.52%** |
-
-### Approximate Exit-Price Snapshot
-
-| Instrument | Exit Date | Approx Exit Price | Crash Low | Avoided Loss per Unit |
-| :--- | :--- | :--- | :--- | :--- |
-| MCX:SILVER | Jan 29, 2026 | **~₹3,77,000** | ~₹2,26,000 | **~40.1%** |
-| MCX:SILVERM | Jan 29, 2026 | **~₹3,85,000** | ~₹2,33,000 | **~39.5%** |
-| MCX:SILVERMIC | Jan 29, 2026 | **~₹3,95,000** | ~₹2,31,000 | **~41.5%** |
-| MCX:GOLDM | Jan 29, 2026 | **~₹1,71,000** | ~₹1,42,000 | **~16.9%** |
-| MCX:GOLDPETAL | Jan 29, 2026 | **~₹18,300** | ~₹15,000 | **~18.1%** |
-
-### Avoided-Loss Scenario Analysis
-
-| Scenario | Estimated Impact |
-| :--- | :--- |
-| silver positions held through full crash | **~6–8% of capital** |
-| gold positions held through full crash | **~1–3% of capital** |
-| conservative total avoided loss | **~8–12% of capital** |
-
-### Important Disclosure
-During this period, the system was not operating as a mythology-grade fully autonomous robot. Alerts, stops, and execution logic did their job — but operator involvement also contributed to minimizing damage when notified levels were triggered. That is an important part of the real-world operating model.
+Infrastructure validation does not establish a permanent market edge. It provides evidence that research, monitoring, risk review, and operator-supervised workflows can function together under the observed conditions.
 
 ---
 
-## 11. War Scenario Event Study — Feb 28 to Mar 2, 2026
+## 5. Methodology and Interpretation
 
-A second major event study comes from the **Iran–US war scenario period** spanning **Feb 28 – Mar 2, 2026**.
+The public validation view uses controlled forward-simulation or pilot-ledger records rather than a claim of audited investor performance. Observations may include modeled costs, slippage assumptions, workflow events, market-data inputs, and operator-reviewed system states.
 
-This matters because it tested the stack under:
+### Interpretation Principles
 
-- geopolitical shock
-- gap-down open conditions
-- intraday volatility spikes
-- cross-asset behavior in both equities and MCX instruments
-
-### Architecture Note from Internal Review
-
-| Component | Description |
-| :--- | :--- |
-| signal engine | **pure price-action driven** |
-| news awareness | **none** |
-| watchlist source | **operator curated** |
-| execution style | **structured breakout / tranche-based** |
-| risk handling | **dynamic and process-driven** |
-
-### Event Readout
-
-| Observation | Why it matters |
-| :--- | :--- |
-| positions were built before the catalyst became public | supports price-action responsiveness |
-| system did not panic-exit on the shock open | shows process discipline |
-| multiple equity names were exited into recovery strength | supports structured profit extraction |
-| one MCX India entry was mistimed near intraday volatility peak | shows realistic non-perfect execution behavior |
-
-### Representative Trade Summary from the War Scenario
-
-| Symbol / Instrument | Context | Exit Type / Status | Outcome | Why it mattered |
-| :--- | :--- | :--- | :--- | :--- |
-| BHARATFORG | pre-catalyst breakout participation | smart system exit | strong profit | showed disciplined extraction into strength |
-| NETWEB | breakout-driven equity participation | smart system exit | strong profit | validated structured exit behavior |
-| APARINDS | multi-tranche equity participation | tranche exits | cumulative strong profit realization | showed scaling and phased profit-taking |
-| MTARTECH | volatile equity participation | partial manual + later stop-driven | mixed but controlled | useful example of real non-perfect execution |
-| SILVER26MARFUT | commodity exposure during shock regime | risk-free / monitored | protected state | showed commodity-side risk handling |
-| MCX India (equity) | entry near volatility peak | still monitored / mildly adverse | weaker timing | useful example of timing risk under stress |
-
-### Important Disclosure
-The internal war report reflects a real operating model where **human operator curates watchlist → price-action engine detects breakout signals → autonomous tranche execution → dynamic risk management**. That disclosure increases credibility rather than reducing it.
+- Results describe the observed validation window only.
+- Metric cards and visual artifacts can reflect different snapshot times.
+- Drawdown is treated as an operational risk observation, not merely a presentation statistic.
+- Workflow events or trades are counts from the validation process and do not disclose underlying strategy logic.
+- Operator supervision is part of the operating model.
+- No public artifact should be used to infer private rules, positions, account activity, or execution logic.
 
 ---
 
-## 12. System Features Most Relevant to Risk Survival
+## 6. Operational Stress-Scenario Evidence
 
-From the current validation evidence, the following features appear most relevant to survivability:
+These operational validation case studies examine infrastructure behavior during demanding market conditions. They focus on monitoring, risk-state visibility, exposure review, alerting, reconciliation, and operator-supervised workflow discipline.
 
-| Feature | Why it matters |
-| :--- | :--- |
-| layered stop and drawdown protection | limits catastrophic damage |
-| risk-aware scaling and tranche exits | improves exit quality |
-| reconciliation between intended and actual state | reduces operational drift |
-| portfolio-level exposure awareness | prevents blind position stacking |
-| analytics beyond headline P&L | reveals path risk |
-| alerts and mobile workflows | supports timely response |
-| multi-asset handling | avoids siloed execution thinking |
+### Commodity Stress Scenario — Precious Metals / Silver Crash
+
+The validation window included a severe precious-metals dislocation, visible in the master equity curve as the “Silver Crash” event marker.
+
+The chart annotation records: **“Silver Crash: -46% | Optimus: Already Out.”** This is included as a validation artifact showing that the infrastructure had a reviewable risk-state and position-state record before the full stress move unfolded.
+
+This case study is important because it tests whether the infrastructure could preserve visibility and operational discipline during a fast adverse commodity-market shock.
+
+#### Numeric Stress Snapshot
+
+The silver crash case is included because it was a severe commodity stress event, not a normal market fluctuation. Approximate validation records from the stress window show the following market dislocation:
+
+| Instrument         | Approx Peak Price | Approx Crash Low | Approx Drop |
+| :----------------- | ----------------: | ---------------: | ----------: |
+| MCX Silver Futures |        ~₹4,21,000 |       ~₹2,26,000 | **-46.18%** |
+| MCX Silver Micro   |        ~₹4,28,000 |       ~₹2,31,000 | **-46.05%** |
+| MCX Silver Mini    |        ~₹4,22,000 |       ~₹2,33,000 | **-45.30%** |
+| MCX Gold Futures   |        ~₹1,81,000 |       ~₹1,42,000 | **-24.65%** |
+| MCX Gold Petal     |          ~₹19,100 |         ~₹15,000 | **-21.52%** |
+
+#### Position-State / Exit Snapshot
+
+Internal validation records show that relevant commodity exposure was already reduced or exited before the full stress move unfolded. Approximate exit-state evidence:
+
+| Instrument    | Exit Date    | Approx Exit Price | Approx Crash Low | Approx Avoided Move |
+| :------------ | :----------- | ----------------: | ---------------: | ------------------: |
+| MCX:SILVER    | Jan 29, 2026 |        ~₹3,77,000 |       ~₹2,26,000 |          **~40.1%** |
+| MCX:SILVERM   | Jan 29, 2026 |        ~₹3,85,000 |       ~₹2,33,000 |          **~39.5%** |
+| MCX:SILVERMIC | Jan 29, 2026 |        ~₹3,95,000 |       ~₹2,31,000 |          **~41.5%** |
+| MCX:GOLDM     | Jan 29, 2026 |        ~₹1,71,000 |       ~₹1,42,000 |          **~16.9%** |
+| MCX:GOLDPETAL | Jan 29, 2026 |          ~₹18,300 |         ~₹15,000 |          **~18.1%** |
+
+#### Conservative Avoided-Risk Scenario
+
+| Scenario                                 | Estimated Impact If Exposure Had Been Held |
+| :--------------------------------------- | :----------------------------------------- |
+| Silver positions held through full crash | **~6–8% of capital**                       |
+| Gold positions held through full crash   | **~1–3% of capital**                       |
+| Conservative total avoided-risk estimate | **~8–12% of capital**                      |
+
+This numeric case study is presented as operational validation evidence. It shows that the infrastructure preserved a reviewable record of exposure state, exit state, risk state, and post-event reconstruction during a severe commodity dislocation.
+
+It does not claim that Optimus Quanta can always exit before future crashes, predict commodity shocks, guarantee drawdown protection, or produce repeatable profits in future black-swan events.
+
+| Validation Area       | What Was Reviewed                                                                                              |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------- |
+| Exposure visibility   | Whether the system preserved a clear view of commodity exposure before and during the stress window            |
+| Risk-state tracking   | Whether risk status, drawdown behavior, and alerts remained reviewable                                         |
+| Position-state review | Whether the system retained a clear record of whether relevant exposure was active, reduced, or already exited |
+| Operator workflow     | Whether the operator could review the situation without losing dashboard or reporting clarity                  |
+| Post-event evidence   | Whether the event could be reconstructed after the fact without relying on memory or screenshots alone         |
+
+The operational observation from this scenario is narrow: the infrastructure preserved a usable view of exposure, risk state, and workflow history during a major commodity stress event.
+
+This does **not** mean the system can always exit before future crashes. It does **not** claim prediction ability, guaranteed protection, or repeatable profits during commodity shocks. The case is presented only as infrastructure validation evidence.
+
+### Geopolitical Stress Scenario — Iran-US War Window
+
+A second major stress case came from the **Iran-US war scenario window**. This period tested the infrastructure under:
+
+- geopolitical shock;
+- gap-down open conditions;
+- intraday volatility spikes;
+- cross-asset behavior across equities and commodity-linked workflows;
+- operator-supervised review under fast-moving conditions.
+
+The master equity curve visually marks this period with the annotation: **“Iran-US War | Held Defence Basket → Profited.”** This is treated as a validation artifact from that specific window, not as a claim of geopolitical prediction or repeatable war-event profits.
+
+#### Architecture Note from Internal Review
+
+| Component        | Public-Safe Description                                      |
+| :--------------- | :----------------------------------------------------------- |
+| Signal engine    | Price-action driven research and workflow engine             |
+| News awareness   | No claim of news prediction or geopolitical forecasting      |
+| Watchlist source | Operator-curated review universe                             |
+| Execution style  | Structured breakout / tranche-style workflow                 |
+| Risk handling    | Dynamic, process-driven risk review and operator supervision |
+
+#### Event Readout
+
+| Observation                                                    | Why It Matters                                                        |
+| :------------------------------------------------------------- | :-------------------------------------------------------------------- |
+| Positions were built before the catalyst became public         | Supports price-action responsiveness without claiming news prediction |
+| The system did not panic-exit on the shock open                | Shows process discipline during gap-down stress                       |
+| Multiple equity names were exited into recovery strength       | Shows structured profit extraction and exit workflow review           |
+| One MCX India entry was mistimed near intraday volatility peak | Shows realistic non-perfect execution behavior and honest reporting   |
+
+#### Representative Trade Summary from the War Scenario
+
+| Symbol / Instrument | Context                                | Exit Type / Status                          | Outcome                              | Why It Mattered                              |
+| :------------------ | :------------------------------------- | :------------------------------------------ | :----------------------------------- | :------------------------------------------- |
+| BHARATFORG          | Pre-catalyst breakout participation    | Smart system exit                           | Strong profit                        | Showed disciplined extraction into strength  |
+| NETWEB              | Breakout-driven equity participation   | Smart system exit                           | Strong profit                        | Validated structured exit behavior           |
+| APARINDS            | Multi-tranche equity participation     | Tranche exits                               | Cumulative strong profit realization | Showed scaling and phased profit-taking      |
+| MTARTECH            | Volatile equity participation          | Partial manual + later stop-driven handling | Mixed but controlled                 | Useful example of real non-perfect execution |
+| SILVER26MARFUT      | Commodity exposure during shock regime | Risk-free / monitored state                 | Protected state                      | Showed commodity-side risk handling          |
+| MCX India           | Entry near volatility peak             | Monitored / mildly adverse                  | Weaker timing                        | Useful example of timing risk under stress   |
+
+#### Public-Safe Interpretation
+
+The war-window evidence is important because it shows that Optimus Quanta remained operationally coherent during a fast-moving shock. The value is not just that some trades worked; the value is that the infrastructure preserved a reviewable record of signal state, position state, risk state, exits, and operator-supervised workflow behavior.
+
+This section does not claim advance knowledge of the geopolitical event, permanent alpha, guaranteed protection, or repeatable profits during future war scenarios.
+
+### Choppy-Market Regime Scenario
+
+The validation window also included periods of unstable and directionally inconsistent market behavior. These periods were used to examine whether repeated signal changes, drawdown monitoring, workflow-event volume, and operator review remained manageable.
+
+This scenario tested whether:
+
+- monitoring remained usable as market direction changed;
+- repeated signal and workflow-state changes could be reviewed;
+- drawdown and risk-state visibility remained central;
+- workflow-event volume remained operationally manageable;
+- records could be reconciled after changing conditions; and
+- operator-supervised processes maintained discipline.
+
+The relevant evidence is infrastructure survivability, observability, reconciliation, and workflow discipline—not return bragging or a claim that choppy markets can be navigated without loss.
+
+### What These Stress Scenarios Demonstrate
+
+- Monitoring surfaces remained usable under stress.
+- Risk review and drawdown visibility remained central.
+- Event evidence could be reviewed after the fact.
+- Workflow records were preserved.
+- Operator-supervised processes remained explicit.
+- Stress scenarios could be reviewed without exposing proprietary strategy rules.
+- Chart annotations were preserved as validation artifacts.
+- The system retained operational evidence around exposure, risk state, and workflow review.
+- Public discussion can describe infrastructure behavior without exposing private alpha logic.
+
+### What These Stress Scenarios Do Not Prove
+
+- They do not prove permanent alpha.
+- They do not prove future profitability.
+- They do not guarantee future drawdown limits.
+- They do not imply advance knowledge of shocks.
+- They do not provide investment advice or return projections.
+- They do not reveal private strategy or execution logic.
 
 ---
 
-## 13. What the Evidence Supports So Far
+## 7. Risk and Drawdown Review
 
-### Strengths Observed
+Observed max drawdown is reported in the current public snapshot as **4.29%**. This figure is part of the infrastructure validation record and should be read alongside the validation mode, modeled assumptions, and limitations in this appendix.
 
-| Strength | Why it matters |
-| :--- | :--- |
-| resilient behavior in hostile conditions | survival matters more than cosmetic backtests |
-| contained drawdown | supports capital-preservation thesis |
-| distinction between smoothed and granular risk | improves reporting honesty |
-| reduced damage in crash-sensitive commodities | validates exit discipline |
-| workflow maturity beyond one backtest | indicates ecosystem thinking |
-| integrated analytics + alerts + execution support | supports real usability |
+The risk-review process emphasizes:
 
-### What This Does **Not** Yet Prove
+- visibility into adverse path behavior;
+- consistent exposure and drawdown monitoring;
+- exception and reconciliation review;
+- modeled slippage tolerance;
+- operator-supervised responses; and
+- preservation of an auditable operational record.
 
-| Limitation | Why it should be stated |
-| :--- | :--- |
-| does not prove permanent edge | avoids overclaiming |
-| does not guarantee future live profitability | keeps document honest |
-| not a substitute for long-horizon audited deployment | sets correct expectation |
-| does not remove need for operator judgment | reflects real operating model |
-
-That is why the current stance should be **confident, but evidence-led**.
+No drawdown figure guarantees a future risk limit. Different instruments, regimes, liquidity conditions, data quality, and operational circumstances can produce materially different outcomes.
 
 ---
 
-## 14. Known Limitations
+## 8. Evidence Supported by the Current Validation
 
-| Limitation | Why it matters |
-| :--- | :--- |
-| current phase is still paper-mode validation | results are promising but not final deployment proof |
-| operator supervision remains part of the process | this is not a zero-human black box claim |
-| private codebase is not publicly auditable | readers must evaluate via evidence rather than source access |
-| current report window is still limited in length | longer-cycle validation is still needed |
-| event studies are strong but not exhaustive | more regimes still need to be observed |
+The current public evidence supports a limited set of infrastructure observations:
 
-This does not weaken the system narrative. It makes the document more honest and more useful.
+- systematic research and monitoring workflows operated together during the observed window;
+- dashboards and risk-review surfaces provided operational visibility;
+- modeled slippage tolerance was included in the public validation snapshot;
+- workflow events were recorded at sufficient scale to support process review;
+- operator supervision remained explicit rather than being presented as fully autonomous execution; and
+- stress scenarios could be reviewed without publishing proprietary logic or private account information.
 
----
-
-## 15. Relationship to Public Repositories
-
-The public repositories on my GitHub should be understood as **visible fragments** of a broader private operating stack.
-
-| Public Repo Role | Meaning |
-| :--- | :--- |
-| public-safe tools | visible outputs of broader R&D |
-| research artifacts | strategy and workflow experimentation |
-| side systems | smaller focused builds |
-| infrastructure components | reusable execution / analysis pieces |
-| public slices | not the complete private engine |
-
-The private stack is what I use daily. The public repos are not fake or decorative — but they are not the whole engine.
+The evidence does not prove permanent alpha, future profitability, investor returns, or immunity from operational and market risk.
 
 ---
 
-## 16. Closing Interpretation
+## 9. Limitations and Disclosure
 
-The strongest takeaway from the current validation phase is not simply that the stack is up.
+| Limitation | Public Interpretation |
+| :--- | :--- |
+| Controlled validation conditions | Not equivalent to audited investor performance |
+| Limited observation window | Does not cover every market regime or failure mode |
+| Modeled assumptions | Real-world costs and execution conditions may differ |
+| Operator supervision | Results reflect an operator-supervised workflow |
+| Private implementation | Public evidence cannot independently reveal or audit proprietary logic |
+| Snapshot timing | Website cards and chart artifacts may update at different times |
 
-The stronger takeaway is this:
+Optimus Quanta remains private quant research and trading infrastructure. Public materials are intentionally limited to disclosure-safe evidence about infrastructure behavior. They do not expose private strategy rules, credentials, account data, live positions, execution logic, or proprietary implementation details.
 
-> the system appears capable of **surviving bad environments with controlled damage while remaining operationally coherent across assets**.
+---
 
-That is a more meaningful sign than headline return alone.
+## 10. Relationship to Public Repositories
 
-The edge is not a single indicator or one lucky trade. It comes from the combination of:
+Selected public repositories demonstrate portions of the broader research and engineering practice, such as scanners, backtesting, analytics, and risk tooling. They are public evidence of development capability, not a release of the private Optimus Quanta system.
 
-- market research
-- rule design
-- risk discipline
-- execution structure
-- telemetry
-- operator responsibility
-- and software built to support those decisions under live conditions.
+The public repositories should not be interpreted as containing the complete infrastructure, production configuration, private datasets, broker integrations, strategy logic, or live operational state.
+
+---
+
+## 11. Closing Interpretation
+
+The purpose of this appendix is to document evidence that Optimus Quanta can support a disciplined research and operational workflow under observed validation conditions.
+
+The central claim is deliberately narrow: the infrastructure demonstrated measurable, reviewable behavior across research, monitoring, analytics, risk review, broker workflows, and operator-supervised execution support. Continued validation is required, and no result in this document is investment advice, a projected investor return, or a guarantee of future performance.

@@ -55,7 +55,20 @@ The infrastructure exists to support the research process, validation standards,
 
 ## Public Validation Evidence
 
-Selected validation evidence for Optimus Quanta is published on [optimusquanta.com](https://optimusquanta.com) as operational evidence of infrastructure behavior under controlled forward-simulation or pilot conditions. Detailed validation notes are maintained in [PERFORMANCE_VALIDATION_APPENDIX.md](./PERFORMANCE_VALIDATION_APPENDIX.md).
+Selected validation evidence for Optimus Quanta is published on [optimusquanta.com](https://optimusquanta.com) as operational evidence of infrastructure behavior under controlled forward-simulation or pilot conditions.
+
+| Validation Metric        | Public Evidence |
+| :----------------------- | --------------: |
+| Observed Net Result      |      **17.13%** |
+| Master Equity Curve View |     **+17.16%** |
+| Nifty 50 Comparison      |    **~ -15.9%** |
+| Observed Max Drawdown    |       **4.29%** |
+| Sharpe Ratio             |        **3.50** |
+| Workflow Events / Trades |         **406** |
+
+Detailed validation notes, stress-window evidence, silver-crash review, geopolitical shock review, and the master equity curve are maintained in [PERFORMANCE_VALIDATION_APPENDIX.md](./PERFORMANCE_VALIDATION_APPENDIX.md).
+
+These figures are presented as infrastructure validation evidence, not investment advice, projected returns, or a guarantee of future performance.
 
 ---
 

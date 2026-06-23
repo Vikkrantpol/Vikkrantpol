@@ -178,20 +178,51 @@ This does **not** mean the system can always exit before future crashes. It does
 
 ### Geopolitical Stress Scenario — Iran-US War Window
 
-The master equity curve also visually marks the Iran-US war window. This case study reviews infrastructure behavior during elevated geopolitical uncertainty and cross-asset volatility.
+A second major stress case came from the **Iran-US war scenario window**. This period tested the infrastructure under:
 
-The review focuses on:
+- geopolitical shock;
+- gap-down open conditions;
+- intraday volatility spikes;
+- cross-asset behavior across equities and commodity-linked workflows;
+- operator-supervised review under fast-moving conditions.
 
-- cross-asset monitoring and market-state visibility;
-- defence-basket handling within the observed workflow;
-- dashboard continuity and alert review;
-- portfolio and risk-state assessment;
-- preservation of workflow records; and
-- operator-supervised decision discipline.
+The master equity curve visually marks this period with the annotation: **“Iran-US War | Held Defence Basket → Profited.”** This is treated as a validation artifact from that specific window, not as a claim of geopolitical prediction or repeatable war-event profits.
 
-The chart contains the annotation **“Iran-US War | Held Defence Basket → Profited.”** This wording is treated only as a chart artifact and observed validation note for that specific window. It does not imply geopolitical prediction, advance knowledge of the event, guaranteed protection, or repeatable profits from future war-related market moves.
+#### Architecture Note from Internal Review
 
-The relevant evidence is that the workflow remained visible, reviewable, and operationally coherent under the observed stress—not that the same market outcome can be reproduced.
+| Component        | Public-Safe Description                                      |
+| :--------------- | :----------------------------------------------------------- |
+| Signal engine    | Price-action driven research and workflow engine             |
+| News awareness   | No claim of news prediction or geopolitical forecasting      |
+| Watchlist source | Operator-curated review universe                             |
+| Execution style  | Structured breakout / tranche-style workflow                 |
+| Risk handling    | Dynamic, process-driven risk review and operator supervision |
+
+#### Event Readout
+
+| Observation                                                    | Why It Matters                                                        |
+| :------------------------------------------------------------- | :-------------------------------------------------------------------- |
+| Positions were built before the catalyst became public         | Supports price-action responsiveness without claiming news prediction |
+| The system did not panic-exit on the shock open                | Shows process discipline during gap-down stress                       |
+| Multiple equity names were exited into recovery strength       | Shows structured profit extraction and exit workflow review           |
+| One MCX India entry was mistimed near intraday volatility peak | Shows realistic non-perfect execution behavior and honest reporting   |
+
+#### Representative Trade Summary from the War Scenario
+
+| Symbol / Instrument | Context                                | Exit Type / Status                          | Outcome                              | Why It Mattered                              |
+| :------------------ | :------------------------------------- | :------------------------------------------ | :----------------------------------- | :------------------------------------------- |
+| BHARATFORG          | Pre-catalyst breakout participation    | Smart system exit                           | Strong profit                        | Showed disciplined extraction into strength  |
+| NETWEB              | Breakout-driven equity participation   | Smart system exit                           | Strong profit                        | Validated structured exit behavior           |
+| APARINDS            | Multi-tranche equity participation     | Tranche exits                               | Cumulative strong profit realization | Showed scaling and phased profit-taking      |
+| MTARTECH            | Volatile equity participation          | Partial manual + later stop-driven handling | Mixed but controlled                 | Useful example of real non-perfect execution |
+| SILVER26MARFUT      | Commodity exposure during shock regime | Risk-free / monitored state                 | Protected state                      | Showed commodity-side risk handling          |
+| MCX India           | Entry near volatility peak             | Monitored / mildly adverse                  | Weaker timing                        | Useful example of timing risk under stress   |
+
+#### Public-Safe Interpretation
+
+The war-window evidence is important because it shows that Optimus Quanta remained operationally coherent during a fast-moving shock. The value is not just that some trades worked; the value is that the infrastructure preserved a reviewable record of signal state, position state, risk state, exits, and operator-supervised workflow behavior.
+
+This section does not claim advance knowledge of the geopolitical event, permanent alpha, guaranteed protection, or repeatable profits during future war scenarios.
 
 ### Choppy-Market Regime Scenario
 

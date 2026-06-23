@@ -58,7 +58,7 @@ These figures are shown as live-market forward-validation / pilot-ledger evidenc
 
 | Stress Window                  | What Happened                                                                 | Optimus Quanta Validation Observation                                                                                                                                      |
 | :----------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Precious Metals / Silver Crash | A severe commodity dislocation occurred; the chart marks "Silver Crash: -46%" | The chart records "Optimus: Already Out," showing that the infrastructure preserved reviewable position-state and risk-state evidence before the full stress move unfolded |
+| Precious Metals / Silver Crash | A severe commodity dislocation occurred; silver fell around 46% in the recorded stress window | The chart records "Optimus: Already Out"; under conservative validation assumptions, the approximate avoided-risk scenario was ~8–12% of capital |
 | Iran-US War Window             | Geopolitical shock created cross-asset volatility                             | The chart records "Held Defence Basket → Profited," showing that the infrastructure preserved reviewable workflow evidence during a geopolitical stress window             |
 | Choppy Market Regime           | Market direction remained unstable and inconsistent                          | The system maintained a reviewable workflow across signal changes, drawdown monitoring, event volume, and operator review                                                   |
 | Benchmark Weakness             | Nifty 50 declined materially in the plotted validation view                   | Optimus Quanta remained positive in the same plotted validation view                                                                                                       |
@@ -127,6 +127,42 @@ The validation window included a severe precious-metals dislocation, visible in 
 The chart annotation records: **“Silver Crash: -46% | Optimus: Already Out.”** This is included as a validation artifact showing that the infrastructure had a reviewable risk-state and position-state record before the full stress move unfolded.
 
 This case study is important because it tests whether the infrastructure could preserve visibility and operational discipline during a fast adverse commodity-market shock.
+
+#### Numeric Stress Snapshot
+
+The silver crash case is included because it was a severe commodity stress event, not a normal market fluctuation. Approximate validation records from the stress window show the following market dislocation:
+
+| Instrument         | Approx Peak Price | Approx Crash Low | Approx Drop |
+| :----------------- | ----------------: | ---------------: | ----------: |
+| MCX Silver Futures |        ~₹4,21,000 |       ~₹2,26,000 | **-46.18%** |
+| MCX Silver Micro   |        ~₹4,28,000 |       ~₹2,31,000 | **-46.05%** |
+| MCX Silver Mini    |        ~₹4,22,000 |       ~₹2,33,000 | **-45.30%** |
+| MCX Gold Futures   |        ~₹1,81,000 |       ~₹1,42,000 | **-24.65%** |
+| MCX Gold Petal     |          ~₹19,100 |         ~₹15,000 | **-21.52%** |
+
+#### Position-State / Exit Snapshot
+
+Internal validation records show that relevant commodity exposure was already reduced or exited before the full stress move unfolded. Approximate exit-state evidence:
+
+| Instrument    | Exit Date    | Approx Exit Price | Approx Crash Low | Approx Avoided Move |
+| :------------ | :----------- | ----------------: | ---------------: | ------------------: |
+| MCX:SILVER    | Jan 29, 2026 |        ~₹3,77,000 |       ~₹2,26,000 |          **~40.1%** |
+| MCX:SILVERM   | Jan 29, 2026 |        ~₹3,85,000 |       ~₹2,33,000 |          **~39.5%** |
+| MCX:SILVERMIC | Jan 29, 2026 |        ~₹3,95,000 |       ~₹2,31,000 |          **~41.5%** |
+| MCX:GOLDM     | Jan 29, 2026 |        ~₹1,71,000 |       ~₹1,42,000 |          **~16.9%** |
+| MCX:GOLDPETAL | Jan 29, 2026 |          ~₹18,300 |         ~₹15,000 |          **~18.1%** |
+
+#### Conservative Avoided-Risk Scenario
+
+| Scenario                                 | Estimated Impact If Exposure Had Been Held |
+| :--------------------------------------- | :----------------------------------------- |
+| Silver positions held through full crash | **~6–8% of capital**                       |
+| Gold positions held through full crash   | **~1–3% of capital**                       |
+| Conservative total avoided-risk estimate | **~8–12% of capital**                      |
+
+This numeric case study is presented as operational validation evidence. It shows that the infrastructure preserved a reviewable record of exposure state, exit state, risk state, and post-event reconstruction during a severe commodity dislocation.
+
+It does not claim that Optimus Quanta can always exit before future crashes, predict commodity shocks, guarantee drawdown protection, or produce repeatable profits in future black-swan events.
 
 | Validation Area       | What Was Reviewed                                                                                              |
 | :-------------------- | :------------------------------------------------------------------------------------------------------------- |

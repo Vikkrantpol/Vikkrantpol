@@ -37,7 +37,53 @@ The master equity curve image displays +17.16% net return, Sharpe 3.50, 82 tradi
 
 ---
 
-## 3. What Is Being Validated
+## 3. Stress-Tested Performance Highlights
+
+Optimus Quanta's validation evidence is not limited to a smooth equity curve. The more important observation is how the infrastructure behaved during hostile live-market conditions: commodity dislocation, geopolitical shock, choppy market structure, drawdown pressure, and benchmark weakness.
+
+The master equity curve records the following validation view:
+
+| Stress-Tested Metric      | Observed Validation View                      |
+| :------------------------ | :-------------------------------------------- |
+| Optimus Quanta Net Result | +17.16% on the plotted master equity curve    |
+| Nifty 50 Comparison       | Approximately -15.9% on the same plotted view |
+| Sharpe Ratio              | 3.50 on the plotted validation view           |
+| Trading Days              | 82                                            |
+| Observed Max Drawdown     | 4.29% from the public validation snapshot     |
+| Workflow Events / Trades  | 406 from the public validation snapshot       |
+
+These figures are shown as live-market forward-validation / pilot-ledger evidence. They are not an audited investor statement, investment advice, projected returns, or a guarantee of future performance.
+
+### Stress Windows Captured
+
+| Stress Window                  | What Happened                                                                 | Optimus Quanta Validation Observation                                                                                                                                      |
+| :----------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Precious Metals / Silver Crash | A severe commodity dislocation occurred; the chart marks "Silver Crash: -46%" | The chart records "Optimus: Already Out," showing that the infrastructure preserved reviewable position-state and risk-state evidence before the full stress move unfolded |
+| Iran-US War Window             | Geopolitical shock created cross-asset volatility                             | The chart records "Held Defence Basket → Profited," showing that the infrastructure preserved reviewable workflow evidence during a geopolitical stress window             |
+| Choppy Market Regime           | Market direction remained unstable and inconsistent                          | The system maintained a reviewable workflow across signal changes, drawdown monitoring, event volume, and operator review                                                   |
+| Benchmark Weakness             | Nifty 50 declined materially in the plotted validation view                   | Optimus Quanta remained positive in the same plotted validation view                                                                                                       |
+
+### Why This Matters
+
+The key validation claim is not that Optimus Quanta can predict every shock. The key claim is that the infrastructure produced a reviewable operating record during severe market stress.
+
+The evidence supports that:
+
+- the equity curve remained resilient during stress windows;
+- benchmark-relative behavior was materially stronger in the plotted validation view;
+- risk and exposure state remained reviewable;
+- event annotations were preserved as validation artifacts;
+- operator-supervised workflow discipline remained visible;
+- the system generated post-event evidence instead of relying on memory; and
+- the infrastructure could be evaluated under adverse market conditions, not only in clean trending markets.
+
+### Important Boundary
+
+This section does not claim permanent alpha, guaranteed crash protection, geopolitical prediction ability, or repeatable profits during future stress events. It presents stress-window behavior as operational validation evidence for the infrastructure.
+
+---
+
+## 4. What Is Being Validated
 
 Optimus Quanta is evaluated as an infrastructure and operating workflow, not solely as a return series. The validation process reviews:
 
@@ -55,7 +101,7 @@ Infrastructure validation does not establish a permanent market edge. It provide
 
 ---
 
-## 4. Methodology and Interpretation
+## 5. Methodology and Interpretation
 
 The public validation view uses controlled forward-simulation or pilot-ledger records rather than a claim of audited investor performance. Observations may include modeled costs, slippage assumptions, workflow events, market-data inputs, and operator-reviewed system states.
 
@@ -70,11 +116,9 @@ The public validation view uses controlled forward-simulation or pilot-ledger re
 
 ---
 
-## 5. Operational Stress-Scenario Evidence
+## 6. Operational Stress-Scenario Evidence
 
 These operational validation case studies examine infrastructure behavior during demanding market conditions. They focus on monitoring, risk-state visibility, exposure review, alerting, reconciliation, and operator-supervised workflow discipline.
-
-They are not claims of prediction, guaranteed protection, repeatable profits, or investment advice. The discussion remains public-safe and does not expose private strategy rules, private execution logic, account data, live positions, broker credentials, or proprietary alpha logic.
 
 ### Commodity Stress Scenario — Precious Metals / Silver Crash
 
@@ -151,7 +195,7 @@ The relevant evidence is infrastructure survivability, observability, reconcilia
 
 ---
 
-## 6. Risk and Drawdown Review
+## 7. Risk and Drawdown Review
 
 Observed max drawdown is reported in the current public snapshot as **4.29%**. This figure is part of the infrastructure validation record and should be read alongside the validation mode, modeled assumptions, and limitations in this appendix.
 
@@ -168,7 +212,7 @@ No drawdown figure guarantees a future risk limit. Different instruments, regime
 
 ---
 
-## 7. Evidence Supported by the Current Validation
+## 8. Evidence Supported by the Current Validation
 
 The current public evidence supports a limited set of infrastructure observations:
 
@@ -183,7 +227,7 @@ The evidence does not prove permanent alpha, future profitability, investor retu
 
 ---
 
-## 8. Limitations and Disclosure
+## 9. Limitations and Disclosure
 
 | Limitation | Public Interpretation |
 | :--- | :--- |
@@ -198,7 +242,7 @@ Optimus Quanta remains private quant research and trading infrastructure. Public
 
 ---
 
-## 9. Relationship to Public Repositories
+## 10. Relationship to Public Repositories
 
 Selected public repositories demonstrate portions of the broader research and engineering practice, such as scanners, backtesting, analytics, and risk tooling. They are public evidence of development capability, not a release of the private Optimus Quanta system.
 
@@ -206,7 +250,7 @@ The public repositories should not be interpreted as containing the complete inf
 
 ---
 
-## 10. Closing Interpretation
+## 11. Closing Interpretation
 
 The purpose of this appendix is to document evidence that Optimus Quanta can support a disciplined research and operational workflow under observed validation conditions.
 

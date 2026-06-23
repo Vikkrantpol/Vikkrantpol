@@ -37,11 +37,11 @@ My conviction is simple: robust quant infrastructure should not be reserved only
 
 ## Optimus Quanta — Private Quant Research Infrastructure
 
-A private multi-module trading system designed around research, monitoring, analytics, and execution support.
+A private production-grade quant infrastructure system designed around systematic research, monitoring, analytics, risk review, broker workflows, and operator-supervised execution support.
 
 This stack grew out of years of market R&D and hands-on trading work. It is developed iteratively with AI-assisted research and engineering workflows that accelerate implementation while preserving ownership of research direction, system design, validation, debugging, and operational decisions.
 
-The software exists to serve the trading edge, not the other way around. The alpha thesis, rule design, and practical constraints come first; the code is the vehicle that makes those ideas usable.
+The infrastructure exists to support the research process, validation standards, risk discipline, and operational workflow. Proprietary strategy logic and private execution details are intentionally not exposed publicly.
 
 | Module | Description |
 | :--- | :--- |

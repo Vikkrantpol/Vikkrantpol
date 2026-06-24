@@ -2,13 +2,14 @@
 
 ```text
                           ╔══════════════════════════════════════════════════════════════╗
-                          ║              VIKKRANT POL · OPTIMUS QUANTA                    ║
-                          ║   IIT Goa · Quant Research Infrastructure · Risk Analytics   ║
+                          ║              VIKKRANT POL · OPTIMUS QUANTA                 ║
+                          ║ IIT Goa · Production Autonomous Equity Trading Software     ║
                           ╚══════════════════════════════════════════════════════════════╝
 ```
 
-**Founder, Optimus Quanta · Quant Research Infrastructure · Systematic Market Workflows · Risk Analytics**
-*Building private infrastructure for systematic market research, validation, risk analysis, and live operations.*
+**Founder, Optimus Quanta · Production Autonomous Equity Trading Software · AI Research Agents · Risk-Gated Live Execution**
+
+*Building private production trading software for systematic research, market scans, backtesting, broker workflows, risk analytics, reconciliation, and live market operations.*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vikkrant_Pol-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/vikkrantpol)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
@@ -25,23 +26,31 @@
 
 > *"Markets are information. Infrastructure is alpha."*
 
-I'm **Vikkrant Pol**, an IIT Goa graduate and the founder-builder of **Optimus Quanta**, a private quant research and trading infrastructure system.
+I'm **Vikkrant Pol**, an IIT Goa graduate and the founder-builder of **Optimus Quanta**, a private production autonomous equity trading software system.
 
-I build systems for **systematic market research, backtesting, risk analytics, scanners, dashboards, and live-operations infrastructure** across derivatives, commodities, equities, and related market workflows.
+I build systems for **systematic market research, market scanning, backtesting, Monte Carlo simulation, walk-forward validation, broker-connected workflows, risk analytics, dashboards, reconciliation, AI-assisted research agents, and live-operations infrastructure** across Indian equities, NSE F&O, MCX commodities, and selected multi-market workflows.
 
-My work is domain-led and infrastructure-focused: translating research questions into repeatable data workflows, validation tooling, monitoring surfaces, risk controls, and operational systems. AI serves as a research and development accelerator within that process, while market judgment, system design, validation standards, and operational responsibility remain central.
-
-My conviction is simple: robust quant infrastructure should not be reserved only for institutions.
+My work is domain-led and system-focused: translating market research questions into repeatable data workflows, validation tooling, monitoring surfaces, risk controls, execution-aware processes, and operational systems. AI serves as a research and development accelerator, while market judgment, system design, validation standards, risk decisions, and operational responsibility remain central.
 
 ---
 
-## Optimus Quanta — Private Quant Research Infrastructure
+## Optimus Quanta — Private Production Autonomous Trading Software
 
-A private production-grade quant infrastructure system designed around systematic research, monitoring, analytics, risk review, broker workflows, and operator-supervised execution support.
+A private production-grade trading software system designed around systematic research, market scanning, backtesting, Monte Carlo simulation, walk-forward validation, broker workflows, risk review, reconciliation, AI research agents, and operator-supervised live execution support.
 
-This stack grew out of years of market R&D and hands-on trading work. It is developed iteratively with AI-assisted research and engineering workflows that accelerate implementation while preserving ownership of research direction, system design, validation, debugging, and operational decisions.
+The private codebase spans **225k+ tracked LOC** across Python runtime, dashboard/frontend, tests, documentation, scanner, deployment, and operations tooling. It runs with a split production architecture: dashboard/API service plus live trading runtime service.
 
-The infrastructure exists to support the research process, validation standards, risk discipline, and operational workflow. Proprietary strategy logic and private execution details are intentionally not exposed publicly.
+| Build Evidence | Scope |
+| :--- | :--- |
+| Codebase scale | 225k+ tracked LOC |
+| Python surface | 91k+ Python LOC |
+| Test coverage surface | 522 discovered test definitions |
+| Runtime architecture | Dashboard/API + live trading runtime |
+| Research layer | Backtesting, Monte Carlo, walk-forward, stress-scenario review |
+| AI layer | AI employees, boardroom workflows, AI query layer |
+| Ops layer | EC2/Linux deployment, monitoring, backups, audit trails, recovery readiness |
+
+Proprietary strategy logic, account data, broker credentials, private execution details, and alpha-generating thresholds are intentionally not exposed publicly.
 
 | Module | Description |
 | :--- | :--- |
@@ -68,7 +77,7 @@ Selected validation evidence for Optimus Quanta is published on [optimusquanta.c
 
 Detailed validation notes, stress-window evidence, silver-crash review, geopolitical shock review, and the master equity curve are maintained in [PERFORMANCE_VALIDATION_APPENDIX.md](./PERFORMANCE_VALIDATION_APPENDIX.md).
 
-These figures are presented as infrastructure validation evidence, not investment advice, projected returns, or a guarantee of future performance.
+These figures are presented as software/infrastructure validation evidence, not investment advice, projected returns, or a guarantee of future performance.
 
 ---
 
@@ -123,9 +132,6 @@ $ signalscan --market NSE --conditions P1,P2,P3 --export tv
 | SQLite state engine | Persistent scan history, diffs, archive, sector reports |
 | Cap-class summaries | Smallcap / midcap / largecap breakdown for NSE universe |
 | Security model | Real thresholds and broker keys stay local via `.gitignore` |
-
----
-
 
 ---
 
@@ -189,8 +195,10 @@ Risk Management  ███████████████████░  P
 
 AI supports the research and development process where it improves speed, structure, and iteration quality. Typical uses include:
 
-* trade review
+* scheduled research scans
+* backtest and validation review
 * structured signal explanation
+* journal/database query support
 * workflow assistance
 * development productivity across multi-file systems
 
@@ -202,7 +210,7 @@ The broader approach remains domain-first: market research, validation disciplin
 
 <div align="center">
 
-Open to conversations around **quant development**, **trading systems**, **derivatives research**, and **market infrastructure**.
+Open to conversations around **quant research**, **trading systems**, **autonomous trading software**, **derivatives workflows**, and **market infrastructure**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Vikkrant_Pol-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/vikkrantpol)
 [![GitHub](https://img.shields.io/badge/GitHub-@Vikkrantpol-181717?style=flat-square&logo=github)](https://github.com/Vikkrantpol)
